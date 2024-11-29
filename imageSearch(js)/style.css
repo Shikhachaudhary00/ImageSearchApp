@@ -1,0 +1,413 @@
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary--color);
+    font-family: "poppins";
+
+}
+
+:root {
+    --primary--color: white;
+    --secondary--color: #b9ec4;
+    --third--color: black;
+}
+
+.dark-theme {
+    --primary--color: black;
+    --secondary--color: #b9ec04;
+    --third--color: #fff;
+}
+
+.imgs {
+    width: 3%;
+    cursor: pointer;
+    align-items: end;
+    padding-left: 30px;
+    padding-right: 10px;
+    margin-left: 30px;
+    color: var(--secondary--color);
+}
+
+.header {
+    width: 100%;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header h2 {
+    margin: 0;
+    color: var(--third--color);
+    font-size: 24px;
+    padding-right: 300px;
+}
+
+.header h2::first-letter {
+    color: #b9ec04;
+}
+
+.header nav {
+    display: flex;
+    margin-left: 100px;
+    color: var(--third--color);
+}
+
+.header nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--third--color);
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.header nav a:hover {
+    background-color: #b9ec04;
+    padding: 5px;
+}
+
+.contain {
+    display: flex;
+    width: 100%;
+    max-width: 940px;
+    margin-right: 40px;
+}
+
+.text {
+    width: 40%;
+    height: 330px;
+    margin-left: 20px;
+    color: var(--third--color);
+    padding: 10px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.text h1::first-letter {
+    font-size: 70px;
+    color: #b9ec04;
+}
+
+.text h1 {
+    font-size: 50px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+.text span {
+    font-size: 40px;
+    font-weight: 700;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.text p {
+    width: 300px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slider {
+    width: 1500px;
+    border-radius: 4px;
+    height: 330px;
+    margin-left: 50px;
+    margin-top: 60px;
+    background-image: url('alexander-akimenko-tWWdVrUSeik-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: slider 5s infinite linear;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url('steve-johnson-okD3TQxIXxw-unsplash.jpg');
+    }
+    20% {
+        background-image: url('stephan-widua-iPOZf3tQfHA-unsplash.jpg');
+    }
+    35% {
+        background-image: url('u-lo-5vlBUky2Uvw-unsplash.jpg');
+    }
+    40% {
+        background-image: url('f0fb8d5c-b9b2-4974-9e52-ddaca73c7485\ -\ Copy.jpeg');
+    }
+    50% {
+        background-image: url("sean-oulashin-KMn4VEeEPR8-unsplash.jpg");
+    }
+    70% {
+        background-image: url('luca-severin-_zHXrebWBho-unsplash.jpg');
+    }
+    100% {
+        background-image: url('Download\ premium\ image\ of\ Jungle\ with\ leopard\ eyes\ wildlife\ cheetah\ animal_\ by\ Boom\ about\ tiger\ eyes\,\ jungle\ animal\,\ cheetah\ photo\,\ jungle\ tiger\,\ and\ leopard\ 13214857\ -\ Copy.jpeg');
+    }
+}
+
+
+
+.search input{
+    padding: 10px;
+    border-radius: 7px;
+    border:1px solid #b9ec04;
+    width: 400px;
+    margin-top: 20px;
+    background-color: white;
+    align-items: center;
+    margin-left: 260px;
+}
+
+.search span{
+    
+    background-color: var(--third--color);
+    color: var(--primary--color);
+    border-radius: 50%;
+    padding: 7px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.img-container {
+    text-align: center;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+}
+
+.imgDiv {
+    position: relative;
+    width: 280px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imgDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgDiv:hover .overlay {
+    height: 100%;
+}
+
+.imgDiv .overlay h2{
+    color: var(--third--color);
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+}
+.imgDiv .overlay h2{
+    display: block;
+}
+.container { 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-right: 2px;
+    margin: 2px;
+    /* height: 100vh; */
+}
+
+.load {
+    border: none;
+    background-color:var(--third--color);
+    padding: 4px;
+    width: 100px;
+    font-size: 20px;
+    color: var(--primary--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 45px;
+    cursor: pointer;
+}
+/* Tablet Layout (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header nav {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .search {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .search input {
+        width: 70%;
+        max-width: 300px;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    .img-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .imgDiv {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .text p {
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .text h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .text span {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+/* Mobile Layout (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .search {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .search input {
+        width: 85%;
+        max-width: 260px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .search span {
+        font-size: 12px;
+        display: inline;
+        margin-top: 5px;
+    }
+
+    .img-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .imgDiv {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .text p {
+        font-size: 10px;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    .text h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .text span {
+        font-size: 18px;
+        text-align: center;
+    }
+}
